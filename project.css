@@ -1,0 +1,148 @@
+body{
+    background: url('hospital.jpg');
+    background-repeat:  no-repeat;
+    background-position: fixed;
+   background-size: cover;
+
+ height:30rem;
+   max-width:100%;
+
+
+
+
+
+
+
+}
+
+
+
+.nav-item
+{
+ margin-left: 40px;
+ overflow: hidden;
+ font-size:1.3rem;
+
+}
+.subheading
+{
+font-size:2.0rem;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+.bgcolor.scrolled
+{
+
+    background-color: #e9f5f8;
+}
+
+
+.hero-wrap {
+
+
+    margin-top:-8.0rem;
+}
+.doct
+{
+    font-size:1rem;
+}
+.extends
+{
+
+   margin-top:-6.0rem;
+
+
+}
+.ftco-section
+{
+    margin-top:-5.0rem;
+}
+.disc
+{
+    margin-top:-7rem;
+}
+
+
+@media (max-width:320px)
+
+{
+
+     .hero-wrap {
+
+       margin-top:4rem;
+        padding:0px;
+
+    }
+  body
+  {
+      height:40rem;
+  }
+  .disc{
+      margin-top:-9rem;
+    padding-left:5px;
+  }
+
+
+}
+@media (max-width:375px)
+
+{
+
+     .hero-wrap {
+
+        margin-top:-1rem;
+
+
+    }
+    body
+  {
+      height:32rem;
+  }
+
+
+}
+@media (max-width:430px)
+{
+    body
+  {
+      height:35rem;
+  }
+
+}
+@media (max-width:770px)
+{
+    body
+  {
+      height:35rem;
+  }
+
+}
+
+
+
+.qualify
+{
+    font-size: 3rem;
+}
+.q2
+{
+    font-size:1rem;
+}.text
+{
+    font-size:1rem;
+}
+.name{
+    font-size:1.3rem;
+}
+
+.department
+{
+    margin-top:7rem;
+
+
+}
+#contact
+{
+    margin-top:2rem;
+}

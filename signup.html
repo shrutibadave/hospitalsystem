@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="container-fluid" style="  background-color:#BFC9CA; height: 100vh;">
+<div class="col" style="margin-left:450px;">
+<div class="col-md-6 py-5 pr-md-5">
+<div class="heading-section heading-section-white ftco-animate mb-5 fadeInUp ftco-animated">
+<h2 class="mb-4">Sign Up Form</h2>
+</div>
+<form action="doc.php" method="post"  name="form"class="appointment-form ftco-animate fadeInUp ftco-animated">
+
+<div class="form-group">
+<input style=" width:400px;" type="text" class="form-control" name="name" id="n1"placeholder="Full Name">
+</div>
+<div class="form-group ml-md-4">
+<input style=" width:400px; margin-top:10px;" type="email" class="form-control" name="email" id="n2" placeholder="Email" onclick="validateForm()">
+</div>
+
+
+<div class="form-group">
+<div class="form-field">
+<div class="select-wrap">
+<div class="icon" style=" margin-top:10px;"><span class="ion-ios-arrow-down"></span></div>
+<select name="sos" id="sos" class="form-control" onclick="validateForm1()">
+<option>Select Your Services</option>
+<option value="Neurology">Neurology</option>
+<option value="Cardiology">Cardiology</option>
+<option value="Dental">Dental</option>
+<option value="Ophthalmology">Ophthalmology</option>
+<option value="Dermatology">Dermatology</option>
+<option value="Surgical">Surgical</option>
+
+</select>
+</div>
+</div>
+</div>
+<div class="form-group ml-md-4">
+<input  style="margin-top:10px;  width:400px;" type="text" class="form-control" id="n5" name="phone" placeholder="Phone">
+</div>
+
+
+
+
+
+<div class="form-group">
+<input style="margin-top:10px;width:400px;"  type="text" class="form-control" name="username" placeholder="Username" onclick="validateForm21()"></input>
+</div>
+<div class="form-group ml-md-4">
+<input style="margin-top:10px; width:400px;" type="password" class="form-control" name="password" placeholder="Password">
+</div>
+
+<div class="form-group">
+<input style="background-color:#5D6D7E  ; margin-top:20px; margin-left:120px;" type="submit" value="Sign Up" class="btn btn-secondary py-3 px-4">
+</div>
+
+</form>
+</div>
+
+</div>
+</div>
+
+<script type="text/javascript">
+function validateForm() {
+  var format = /^[A-Za-z]/
+  var isValid = format.test(document.getElementById("n1").value);
+  var a = document.forms["form"]["name"].value;
+  if (!isValid) {
+          alert("Please enter valid name");}
+
+
+
+   else if (a == null || a == ""  ) {
+        alert("Name must be filled out");
+        return false;
+    }
+    else if(!isNaN(a))
+    {
+
+      alert("Enter valid name");
+      return false;
+    }
+
+
+
+}
+function validateForm1() {
+  var format = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
+  var isValid = format.test(document.getElementById("n2").value);
+  var a = document.forms["form"]["email"].value;
+  if (!isValid) {
+          alert("Please enter valid email");}
+
+
+
+   else if (a == null || a == ""  ) {
+        alert("email must be filled out");
+        return false;
+    }
+    else if(!isNaN(a))
+    {
+
+      alert("Enter valid email");
+      return false;
+    }
+
+
+
+}
+function validateForm21()
+{
+  var c = document.forms["form"]["phone"].value;
+
+  var format = /^[0-9]+$/
+  var isValid = format.test(document.getElementById("n5").value);
+
+
+
+  if (!isValid ||c.length<9) {
+          alert("Please enter valid phone");
+        return false;}
+     if (c == null || c == "") {
+        alert("please enter phone");
+        return false;
+    }
+}
+
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="container-fluid" style="  background-color:#339EFF; height: 100vh;">
+<div class="row" style="margin-left:450px;">
+<div class="col-md-6 py-5 pr-md-5">
+<div class="heading-section heading-section-white ftco-animate mb-5 fadeInUp ftco-animated">
+<span class="subheading"></span>
+<h2 class="mb-4">Take An Appointment</h2>
+<p></p>
+</div>
+<form action="demo.php"  name="form"method="post" class="appointment-form ftco-animate fadeInUp ftco-animated">
+<div class="d-md-flex">
+<div class="form-group">
+<input style=" width:200px;" type="text" class="form-control" id="n1" name="name" placeholder="Full Name" >
+</div>
+<div class="form-group ml-md-4">
+<input style="margin-left:20px; width:200px;" type="text"  id="n2"class="form-control" name="gender" placeholder="Gender" onclick="validateForm()" >
+</div>
+</div>
+<div class="d-md-flex">
+<div class="form-group">
+<div class="form-field">
+<div class="select-wrap">
+<div class="icon" style="margin-top:10px; width:200px;"><span class="ion-ios-arrow-down"></span></div>
+<select  onclick="validateForm1()" name="sos" id="sos" class="form-control"  >
+<option  > Select Your Services</option>
+<option value="Neurology">Neurology</option>
+<option value="Cardiology">Cardiology</option>
+<option value="Dental">Dental</option>
+<option value="Ophthalmology">Ophthalmology</option>
+<option value="Dermatology">Dermatology</option>
+<option value="Surgical">Surgical</option>
+
+</select>
+</div>
+</div>
+</div>
+<div class="form-group ml-md-4">
+<input  style="margin-top:10px; margin-left:20px; width:200px;" type="text"  id="n5"class="form-control" name="phone" placeholder="Phone" onclick="validateForm1()"  >
+
+</div>
+</div>
+<div class="d-md-flex">
+ <div class="form-group">
+<div class="input-wrap">
+<div class="icon"><span class="ion-md-calendar"></span></div>
+<input style="margin-top:10px; width:200px; " type="date" class="form-control appointment_date" name="date" placeholder="Date" onclick="validateForm21()">
+</div>
+</div>
+<div class="form-group ml-md-4">
+<div class="input-wrap">
+<div class="icon"><span class="ion-ios-clock"></span></div>
+<input style="margin-top:10px; margin-left:20px; width:200px;" type="time" class="form-control appointment_time ui-timepicker-input" name="time" placeholder="Time" autocomplete="off"  onclick="validateForm2()">
+</div>
+</div>
+</div>
+<div class="d-md-flex">
+<div class="form-group">
+<textarea style="margin-top:10px;width:200px;"  id="" cols="30" rows="2" class="form-control" name="address" placeholder="Address" onclick="validateForm3()"></textarea>
+</div>
+<div class="form-group ml-md-4">
+<input style="margin-left:20px;margin-top:10px; width:200px;" type="text" class="form-control" name="age" id="n8" placeholder="Age" onclick="validateForm4()" >
+</div>
+
+<div class="form-group">
+  <input style="background-color:#FB9B36; margin-top:100px; margin-left:-275px;" type="submit"    value="Appointment" class="btn btn-secondary py-3 px-4">
+</div>
+</div>
+</form>
+</div>
+
+</div>
+</div>
+<script>
+
+  function validateForm() {
+    var format = /^[A-Za-z]/
+    var isValid = format.test(document.getElementById("n1").value);
+    var a = document.forms["form"]["name"].value;
+    if (!isValid) {
+            alert("Please enter valid name");}
+
+
+
+     else if (a == null || a == ""  ) {
+          alert("Name must be filled out");
+          return false;
+      }
+      else if(!isNaN(a))
+      {
+
+        alert("Enter valid name");
+        return false;
+      }
+
+
+
+  }
+
+  function validateForm1()
+  {
+    var b = document.forms["form"]["gender"].value;
+    var format = /^[A-Za-z]+$/
+    var isValid = format.test(document.getElementById("n2").value);
+    var a = document.forms["form"]["name"].value;
+    if (!isValid) {
+            alert("Please enter valid gender");
+          return false;}
+
+       if (b == null || b == "") {
+          alert("gender must be filled out");
+          return false;
+      }
+
+  }
+  function validateForm21()
+  {
+    var c = document.forms["form"]["phone"].value;
+
+    var format = /^[0-9]+$/
+    var isValid = format.test(document.getElementById("n5").value);
+
+
+
+    if (!isValid ||c.length<9) {
+            alert("Please enter valid phone");
+          return false;}
+       if (c == null || c == "") {
+          alert("please enter phone");
+          return false;
+      }
+  }
+  function validateForm2()
+  {
+    var c = document.forms["form"]["date"].value;
+       if (c == null || c == "") {
+          alert("please enter date");
+          return false;
+      }
+  }
+  function validateForm3()
+  {
+    var d = document.forms["form"]["time"].value;
+       if (d == null || d == "") {
+          alert("Please enter time");
+          return false;
+      }
+  }
+  function validateForm4()
+  {
+    var e = document.forms["form"]["address"].value;
+       if (e == null || e == "") {
+          alert("please enter addresss");
+          return false;
+      }
+
+  }
+  function validdateForm5()
+  {
+    var f = document.forms["form"]["age"].value;
+      var format = /^[0-9]+$/
+    var isValid = format.test(document.getElementById("n8").value);
+
+    if (!isValid  ) {
+            alert("Please enter valid age");}
+
+       if (f == null || f == "") {
+          alert("please enter age");
+          return false;
+      }
+  }
+
+
+  </script>
+
+  </body>
+</html>
